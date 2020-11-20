@@ -12,16 +12,14 @@
 
 	<style>
 	
-	body { padding: 1rem; margin: 0; background: #fff; font-family: 'Open Sans'; }
+	body { padding: 0; margin: 0; background: #fff; font-family: 'Open Sans'; }
+
+	a { display: block; text-decoration: none; } 
 	
-	a { display: block; color: blue; font-size: 1.5rem; background: #f1f5f6; text-decoration: none; } 
+	.row { display: flex; min-width: 850px; }
 	
-	
-	
-	.row { display: flex; }
-	
-	.col { flex: 1; padding: 2rem 0; text-align: center; background: #f1f5f6; margin: 1rem; display: flex; justify-content: center; align-items: center; flex-direction: column; font-weight: 600; background: #f1f5f6; color: #333;  }
-	.col span { display: block; font-size: 1rem; font-weight: 300; margin-top: .2rem; }
+	.col { flex: 1; padding: .5rem 0; text-align: center; background: #f1f5f6; margin: .5rem; display: flex; justify-content: center; align-items: center; flex-direction: column; font-size: 1rem; font-weight: 600; background: #f1f5f6; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  }
+	.col span { display: block; font-size: .8rem; font-weight: 300; margin-top: .2rem;   }
 	.col.head { background: #34495e; color: #fff; }
 
 	.glossa { background: #3498db; color: #fff; }
@@ -35,6 +33,12 @@
 	
 	a.col:hover { background: #34495e; color: #fff; box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.3); }
 	
+	
+	@media (min-width: 1025px) {
+		body { padding: 1rem; }
+		.col { font-size: 1.5rem; padding: 1rem 0; margin: .5rem; }
+		.col span { font-size: 1rem; }
+	}
 	
 	</style>
 
