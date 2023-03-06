@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,19 +8,21 @@
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600,800,300&amp;subset=latin,greek" rel="stylesheet" type="text/css" />
 
-    <title>A2</title>
+    <title>Γ2</title>
 
 	<style>
 	
 	body { padding: 0; margin: 0; background: #fff; font-family: 'Open Sans'; }
 
 	a { display: block; text-decoration: none; } 
+		
+		.program { display: flex; }
 	
-	.row { display: flex; min-width: 850px; }
+	.day { display: flex; flex-direction: column; flex-basis: 200px; flex-grow: 1; }
 	
-	.col { flex: 1; padding: .5rem 0; text-align: center; background: #f1f5f6; margin: .5rem; display: flex; justify-content: center; align-items: center; flex-direction: column; font-size: 1rem; font-weight: 600; background: #f1f5f6; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  }
-	.col span { display: block; font-size: .8rem; font-weight: 300; margin-top: .2rem;   }
-	.col.head { background: #34495e; color: #fff; }
+	.hour { flex: 1; padding: .5rem; text-align: center; background: #f1f5f6; margin: .5rem; display: flex; justify-content: center; align-items: center; flex-direction: column; font-size: 1rem; font-weight: 600; background: #f1f5f6; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  }
+	.hour span { display: block; font-size: .8rem; font-weight: 300; margin-top: .2rem;   }
+	.hour.head { background: #34495e; color: #fff; }
 
 	.glossa { background: #3498db; color: #fff; }
 	.math { background: #1abc9c; color: #fff; }
@@ -30,24 +32,27 @@
 	.art { background: #f1c40f; color: #fff; }
 	.gym { background: #e67e22; color: #fff; }
 	.music { background: #d35400; color: #fff; }
+	.history { background: #fdcb6e; color: #fff; }
 	.computers { background: #e84393; color: #fff;}
+	.french { background: #ad2797; color: #fff;}
 	
-	a.col:hover { background: #34495e; color: #fff; box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.3); }
 	
-	.col.hour { position: static; }
+	
+	a.hour:hover { background: #34495e; color: #fff; box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.3); }
+	
+	.hour.hour { position: static; }
 	
 	@media (max-width: 600px) {
-		.col.hour { position: fixed; padding: .5rem;     width: calc(154px - 1rem); left: 0; height: calc(60px - 1rem);  }
-		.col.hour.head { height: calc(38px - 1rem);}
-		.row { padding-left: 170px; }
+		.day.first { position: fixed; left: 0; background-color: #fff; border: 1px solid #34495e;  }
+		.program { padding-left: 140px; }
 	}
 	
 
 	
 	@media (min-width: 1025px) {
 		body { padding: 1rem; }
-		.col { font-size: 1.5rem; padding: 1rem 0; margin: .5rem; }
-		.col span { font-size: 1rem; }
+		.hour { font-size: 1.5rem; padding: 1rem 0; margin: .5rem; }
+		.hour span { font-size: 1rem; }
 		
 	}
 	
@@ -56,61 +61,48 @@
 </head>
 
     <body>
-        
-			<div class="row">
-				<div class="col head hour">A2</div>
-				<div class="col head">ΔΕΥΤΕΡΑ</div>
-				<div class="col head">ΤΡΙΤΗ</div>
-				<div class="col head">ΤΕΤΑΡΤΗ</div>
-				<div class="col head">ΠΕΜΠΤΗ</div>
-				<div class="col head">ΠΑΡΑΣΚΕΥΗ</div>
+        <div class="program">
+			<div class="day first">
+				<div class="hour head hour">Γ2</div>
+				<div class="hour hour">08:15 - 08:45</div>
+				<div class="hour hour">08:55 - 09:25</div>
+				<div class="hour hour">09:35 - 10:05</div>
+				<div class="hour hour">10:15 - 10:45</div>
+				<div class="hour hour">10:55 - 11:25</div>
+				<div class="hour hour">11:35 - 12:05</div>
 			</div>
 			
-			<div class="row">
-				<div class="col hour">14:10 - 14:30</div>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary2.webex.com/meet/kormpoue" target="_blank" class="col computers">ΠΛΗΡΟΦΟΡΙΚΗ   <span>κα Ελισσάβετ</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
+			<div class="day">
+				<div class="hour head">ΔΕΥΤΕΡΑ</div>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour glossa" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΓΛΩΣΣΑ</a>
+				<a href="https://minedu-primary.webex.com/meet/ledaleda" target="_blank" class="hour music" title="ΑΘΑΝΑΣΑΤΟΥ ΔΗΜΗΤΡΑ">ΜΟΥΣΙΚΗ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour glossa" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΓΛΩΣΣΑ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour math" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΜΑΘΗΜΑΤΙΚΑ</a>
+				<a href="https://minedu-primary.webex.com/meet/istavria" target="_blank" class="hour gym" title="ΣΤΑΥΡΙΑΝΟΣ ΙΩΑΝΝΗΣ">ΓΥΜΝΑΣΤΙΚΗ</a>
+				<a href="https://minedu-primary.webex.com/meet/amichaloudi" target="_blank" class="hour english" title="ΜΙΧΑΛΟΥΔΗ ΑΙΜΙΛΙΑ">ΑΓΓΛΙΚΑ</a>
 			</div>	
 
-			<div class="row">
-				<div class="col hour">14:50 - 15:20</div>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col glossa">ΓΛΩΣΣΑ <span>κος Μιχάλης</span></a>
+			<div class="day">
+				<div class="hour head">ΤΡΙΤΗ</div>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour glossa" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΓΛΩΣΣΑ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour glossa" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΓΛΩΣΣΑ</a>
+				<a href="https://minedu-primary.webex.com/meet/masa81" target="_blank" class="hour theater" title="ΣΑΒΒΑ ΜΑΡΙΑ">ΘΕΑΤΡΟ</a>
+				<a href="https://minedu-primary.webex.com/meet/smoutso" target="_blank" class="hour computer" title="ΜΟΥΤΣΟΓΛΟΥ ΣΑΒΒΑΤΟΥ">ΔΕΞΙΟΤΗΤΕΣ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour math" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΜΑΘΗΜΑΤΙΚΑ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour computer" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΘΡΗΣΚΕΥΤΙΚΑ</a>
+
 			</div>		
 
-			<div class="row">
-				<div class="col hour">15:30 - 16:00</div>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col math">ΜΑΘΗΜΑΤΙΚΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/dimmarkou" target="_blank" class="col art">ΕΙΚΑΣΤΙΚΑ <span>κα Δήμητρα</span></a>
-				<a href="https://minedu-primary.webex.com/meet/ledaleda" target="_blank" class="col music">ΜΟΥΣΙΚΗ <span>κα Δήμητρα</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col math">ΜΑΘΗΜΑΤΙΚΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col math">ΜΑΘΗΜΑΤΙΚΑ <span>κος Μιχάλης</span></a>
+			<div class="day">
+				<div class="hour head">ΤΕΤΑΡΤΗ</div>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour glossa" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΓΛΩΣΣΑ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour glossa" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΓΛΩΣΣΑ</a>
+				<a href="https://minedu-primary.webex.com/meet/amichaloudi" target="_blank" class="hour english" title="ΜΙΧΑΛΟΥΔΗ ΑΙΜΙΛΙΑ">ΑΓΓΛΙΚΑ</a>
+				<a href="https://minedu-primary2.webex.com/meet/kkaradim" target="_blank" class="hour computer" title="ΚΑΡΑΔΗΜΗΤΡΙΟΥ ΚΡ.">ΤΠΕ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour science" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΜΕΛΕΤΗ</a>
+				<a href="https://meet230.webex.com/meet/pr27434852372" target="_blank" class="hour computer" title="ΚΙΜΩΝΑΣ ΚΑΣΤΡΙΝΟΣ">ΘΡΗΣΚΕΥΤΙΚΑ</a>
+				
 			</div>		
-
-			<div class="row">
-				<div class="col hour">16:10 - 16:40</div>
-				<a href="https://minedu-primary.webex.com/meet/mpozidou" target="_blank" class="col gym">ΓΥΜΝΑΣΤΙΚΗ <span>κα Μαρίνα</span></a>
-				<a href="https://minedu-primary.webex.com/meet/mpozidou" target="_blank" class="col gym">ΓΥΜΝΑΣΤΙΚΗ <span>κα Μαρίνα</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col math">ΜΑΘΗΜΑΤΙΚΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col ">ΕΥΕΛΙΚΤΗ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col science">ΜΕΛ. ΠΕΡΙΒΑΛ. <span>κος Μιχάλης</span></a>
-			</div>		
-
-			<div class="row">
-				<div class="col hour">16:50 - 17:20</div>
-				<a href="https://minedu-primary.webex.com/meet/masa81" target="_blank" class="col theater">ΘΕΑΤΡ. ΑΓΩΓΗ <span>κα Μαρία</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col math">ΜΑΘΗΜΑΤΙΚΑ <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col science">ΜΕΛ. ΠΕΡΙΒΑΛ. <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/micnaoum" target="_blank" class="col science">ΜΕΛ. ΠΕΡΙΒΑΛ. <span>κος Μιχάλης</span></a>
-				<a href="https://minedu-primary.webex.com/meet/karatzouni" target="_blank" class="col english">ΑΓΓΛΙΚΑ <span>κα Έλενα</span></a>
-			</div>					
-	
-		
+		</dv>
     </body>
 </html>
